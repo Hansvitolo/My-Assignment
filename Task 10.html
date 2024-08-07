@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on functions</title>
+</head>
+<body>
+    <h1 id="sense">Keep pushing!!!</h1>
+    <p id="sweet"></p>
+
+
+    <script>
+        const ace = 'The best meals can be found at affordable prices, when you go to the remote regions.'
+        console.log(ace)
+        let create = document.getElementById('sense');
+        function myVowel (ace){
+            let outcome = ''
+            for(i = 0; i < ace.length; i++){
+                let str = ace[i];
+                if(str !== 'a' && str !== 'e' && str !== 'i' && str !== 'o' && str !== 'u'){
+                    outcome += str;
+                }
+            }
+            return outcome;
+        }
+        create.innerText = (myVowel(ace));
+
+
+        let sing = document.getElementById('sweet');
+        function happyBirthdaySong(){
+            const song = 'Happy birthday to you\n Happy birthday to you\n Happy birthday dear Danny,\n Happy birthday to you!'
+            return song;
+            // console.log ('Happy birthday to you');
+            // console.log ('Happy birthday to you');
+            // console.log ('Happy birthday dear Drem');
+            // console.log ('Happy birthday to you');
+        }
+        sing.innerText = happyBirthdaySong();
+
+
+        function sum(num1, num2){
+            // console.log(num1 + num2);
+            return num1 + num2;
+        }
+        console.log(sum(2, 7));
+    </script>
+</body>
+</html>

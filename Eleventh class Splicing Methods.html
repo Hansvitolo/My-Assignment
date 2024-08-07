@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array</title>
+</head>
+<body>
+    <h2>Splice Methods</h2>
+    <p id="show"></p>
+
+    <script>
+
+        //Splice adds elements from the first parameter indicated up to the next parameter indicated. e.g (2, 4). This indicates, add from 2 to the fourth value of the array. Note that values will be replaced permanently if second param is not 0.
+
+        let show = document.getElementById('show');
+        let countries = ['Kenya', 'Zimbabwe', 'Zambia', 'Uganda', 'South Africa'];
+
+        show.innerHTML = countries.join(', ');
+
+        countries.splice(2, 0, 'Tanzania', 'Rwanda');
+        show.innerHTML += '<br> ' + countries.join(', ');
+
+        //Slice removes elements from the first parameter indicated up to the next parameter indicated. e.g (2, 4). This indicates, remove from 2 to the fourth value of the array.
+        const countriesRemoved = countries.slice(2);
+        show.innerHTML += '<br> ' + countriesRemoved.join(', ');
+    </script>
+</body>
+</html>

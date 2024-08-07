@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h2>Various Array Methods</h2>
+    <ul>
+        <li>Pop</li>
+        <li>Push</li>
+        <li>Shift</li>
+        <li>Unshift</li>
+    </ul>
+    
+    <script>
+        const brands = ["Zara", "Gucci", "Dior", "Nike", "Addidas", "Jordans", "Fendi", "ZTTW"];
+        console.log(`Total number of brands is ${brands.length}`);
+
+        let rembrands = brands.pop();
+        console.log(`Total number of brands is ${brands.length}`);
+        console.log(`The removed element is ${rembrands}`);
+        
+        brands.push("Chisom brand");
+        console.log(`Total number of brand is ${brands}`);
+    </script>
+</body>
+</html>

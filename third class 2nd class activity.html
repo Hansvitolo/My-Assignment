@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second class activity</title>
+  </head>
+  <body>
+    <h1>Staff Role Progra</h1>
+    <script>
+      let staffrole = prompt("what role are you occupying");
+      if(staffrole == 'Director' || staffrole == 'director'){
+          alert('Welcome Director Sir/Ma');
+      } else if(staffrole == 'Deputy director' || staffrole == 'deputy director'){
+          alert('welcome Deputy Director Sir/Ma');
+      } else if(staffrole == 'manage'){
+          alert('Welcome Manager');
+      } else{alert('Sorry, unrecognized');}
+
+    //   if (staffrole == "Director" || staffrole == "director") {
+    //     alert("Welcome Director Sir/Ma");
+    //     if (staffrole == "Deputy director" || staffrole == "deputy director") {
+    //       alert("welcome Deputy Director Sir/Ma");
+    //     }
+    //     if (staffrole == "manage") {
+    //       alert("Welcome Manager");
+    //     }
+    //   }
+    //   else {
+    //     alert("Sorry, unrecognized");
+    //   }
+
+      const cars = ["BMW", "Volvo", "Saab", "Ford", 'lambo'];
+    //   console.log(cars);
+    //   console.log(cars[1]);
+      for (let index = 0; index < cars.length; index++) {
+        // console.log(cars[index]);
+        if(cars[index] === 'Saab'){
+            console.log(cars[index]);
+        }
+      }
+    </script>
+  </body>
+</html>

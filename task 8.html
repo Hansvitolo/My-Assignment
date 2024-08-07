@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <h1>Task 8</h1>
+</head>
+<body>
+    <script>
+        //Write a javascript function that takes an array of numbers as input and returns the sum of all the even numbers in the array
+        
+        // let input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // for(i = 0; i <= 10; i++){
+        //     let sum = input[1] + input[3] + input[5] + input[7] + input[8];
+        //     // let num = Number(prompt('Enter number'));
+        //     // if(num === 2 && num === 4 && num === 6 && num === 8 && num === 10){
+
+        //     // }
+        //     console.log(sum);
+        // }
+        const arr = [1, 2, 3, 4, 5, 6];
+
+        function sumOfNumbers (arr){
+            let sum = 0;
+            for(i = 0; i < arr.length; i++){
+                if(arr[i] % 2 === 0){
+                    sum += arr[i];
+                }
+            }
+            return sum;
+        }
+        console.log(sumOfNumbers(arr));
+    </script>
+</body>
+</html>

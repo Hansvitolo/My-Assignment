@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Validation of Input</title>
+</head>
+<body>
+    <script>
+        let userinput;
+        while (true){
+            userinput = parseInt(prompt('Enter any number greater than 10'));
+            if (userinput > 10){
+                alert('Instruction Successful');
+                break
+            }
+            alert('Enter number greater than 10');
+        }
+        alert('This is outside of the while block');
+    </script>
+</body>
+</html>

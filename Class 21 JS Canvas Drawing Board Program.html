@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">My Drawing Board</h1>
+    <canvas id="board" width="400" height="300" style="border: 1px solid black;"></canvas>
+    <br>
+    <button id="clearDrawing">Clear</button>
+    <div>
+        Stroke Width: <input type="range" id="strokeWidth" min="1" max="20" value="5">
+        Line Color: <input type="color" id="lineColor" value="#000000">
+    </div>
+
+
+
+    <script>
+        const canvas = document.getElementById('board');
+        const ctx = canvas.getContext('2d');
+        const strokeWidthInput = document.getElementById('strokeWidth');
+        const lineColorInput = document.getElementById('lineColor');
+
+        ctx.lineWidth = strokeWidthInput.value;
+        ctx.strokeStyle = lineColorInput.value;
+
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+
+        canvas.addEventListener('mousedown', (e)=> {
+            isDrawing = true;
+            [lastX, lastY] = [e.offsetX, e.offsetY]
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            if(!isDrawing) return;
+
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
+
+            [lastX, lastY] = [e.offsetX, e.offsetY];
+        });
+
+        canvas.addEventListener('mouseup', () => isDrawing = false);
+        canvas.addEventListener('mouseout', () => isDrawing = false);
+
+        strokeWidthInput.addEventListener('input', () => {
+            ctx.lineWidth = strokeWidthInput.value;
+        });
+
+        lineColorInput.addEventListener('input', () => {
+            ctx.strokeStyle = lineColorInput.value;
+        });
+
+        let clr = document.getElementById('clearDrawing');
+
+        clr.addEventListener('click', function(){
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision Conditional statements</title>
+</head>
+<body>
+    <script>
+        let name = prompt('what is your name?');
+        let age = prompt('what is your age');
+        if(age >= 10 && age <= 20){
+            alert(`${name} has been accepted into this school`);
+            let subject = prompt('What is your field of study?');
+            if(subject == 'science'){
+                alert(`${name} has been enrolled in this program`);
+                let area = prompt('biology, chemistry, physics, mathematics, ict');
+                if(area == 'biology'){
+                    alert(`${name} has been finally accepted.`);
+                    
+                } else{alert(`${name} has failed`);}
+                // else{(alert(`${name} has been rejected.`))}
+            }
+            else{
+                alert(`${name} cannot proceed`);
+            }
+        } else{
+            alert(`${name} has been rejected.`)
+        }
+
+        // let surname = [sam, dean, cass, bobby];
+        // if(surname == sam && surname == dean && surname == cass && surname == bobby ){
+        //     alert(`${surname} is a character in the supernatural series.`);
+        // } else{
+        //     alert('This is not a character in supernatural.');
+        // }
+    </script>
+</body>
+</html>

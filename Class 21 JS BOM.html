@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Use of BOM objects</h2>
+    <button id="open">To open</button>
+    <button id="close">To close</button>
+    <p id="show"></p>
+    <script>
+        // BOM refers to Browser object model
+        // The program below opens and closes windows on your browser
+        
+        
+        let p = document.getElementById('show');
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        p.innerHTML = `Your screen size is ${w}px wide and ${h}px high`;
+
+        let windowX;
+        let btn = document.getElementById('open');
+        let btnc = document.getElementById('close');
+        btn.addEventListener('click', openWindow);
+        btnc.addEventListener('click', closeWindow);
+
+        function openWindow(){
+            // The code on line 33 is valid and only commented out, to show further examples.
+            // The code on line 33 opens another page of the browser on the same page, while line 34 opens on another page entirely.
+
+            // window.open('https:www.google.com', 'Google', 'width=300, height=300');
+            windowX = window.open('', 'My Blank window', 'width=300, height=300');
+            windowX.write('<h2>This is my new window</h2>');
+        }
+
+        // A function was created to close the new page that was opened
+        function closeWindow(){
+            if (windowX){
+                windowX.close()
+            } else{
+                alert('No window open');
+            }
+        }
+    </script>
+</body>
+</html>

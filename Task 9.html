@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+</head>
+<body>
+    <h1>Task 9</h1>
+    <p id="Vowels"></p>
+    <script>
+        // Write a javascript function that takes a string as input and returns the string with all the vowels removed.
+        // For this example, let us say the string is 'The fate of man rests in the palm of his hands'.
+
+        const input = 'The fate of man rests in the palm of his hands';
+
+        // function myString (input){
+        //     for(i = ['a', 'e', 'i', 'o', 'u']; i < input.length; i++){
+        //         if(input[i] == ['a',])
+        //     }
+        // }
+
+        let disp = document.getElementById('Vowels');
+
+
+        function myString (input){
+            let outcome = '';
+            for(i = 0; i < input.length; i++){
+                let str = input[i];
+                if(str !== 'a' && str !== 'e' && str !== 'i' && str !== 'o' && str !== 'u'){
+                    outcome += str;
+                }
+            }
+            return outcome;
+        }
+        disp.innerText = myString(input);
+        // console.log(myString(input));
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tunji's Task 1</h1>
+
+    <script>
+        let user = prompt('Enter your name');
+        alert(`Welcome ${user}`);
+        let secretNumber = Math.floor(Math.random() * 10) + 1;
+        let attempt = 3;
+        while(attempt > 0){
+            let userInput = Number(prompt(`${user}, guess the right number`));
+            if(secretNumber > userInput){
+                attempt -= 1
+                alert(`The secret number (${secretNumber}) is greater than the user number. You have ${attempt} attempts left.`)
+            }
+            else if(secretNumber < userInput){
+                attempt -= 1;
+                alert(`The secret number (${secretNumber}) is less than the user number. You have ${attempt} attempts left.`);
+            }
+            else{
+                alert(`${user}, you guessed the right answer!`);
+                break;
+            }
+        }
+        // for (i = 11; i >= 1; i--){
+        //     let userInput = Number(prompt(`${user}, guess the right number`));
+        //     if(i < 1){
+        //         alert(`${user} GAME OVER PIPE.`);
+        //     }
+        //     if (userInput === secretNumber){
+        //         alert(`${user}, you guessed the right answer!`);
+        //         alert(`${user} thanks for playing.`);
+        //         break;
+        //     }
+        //     else{
+        //         alert(`${user}, the number is greater or less than the secret number (${secretNumber}).\n You have ${i - 1} trial left`);
+        //     }
+            
+        // }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and values</title>
+    <style>
+        #first{
+            background-color: aquamarine;
+            width: 200px;
+            height: 100px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <p id="display"></p>
+    <div id="first">
+        <input type="number" name="" id="num1" placeholder="enter first number" style="margin: 10px;">
+        <input type="number" name="" id="num2" placeholder="enter second number" style="margin: 10px;">
+    </div>
+
+    <br><br>
+    <button id="plus" onclick="plus()">+</button>
+    <button id="minus" onclick="minus()">-</button>
+    <button id="multiplication" onclick="multiplication()">*</button>
+    <button id="division" onclick="division()">/</button>
+
+    <script>
+        let a = document.getElementById('num1');
+        let b = document.getElementById('num2');
+        let result = document.getElementById('display');
+
+        function plus(){
+            let c = parseInt(a.value) + parseInt(b.value);
+            result.innerText = 'Total is ' + c;
+        }
+        function minus(){
+            let c = parseInt(a.value) - parseInt(b.value);
+            result.innerText = 'Total is ' + c;
+        }
+        function multiplication(){
+            let c = parseInt(a.value) * parseInt(b.value);
+            result.innerText = 'Total is ' + c;
+        }
+        function division(){
+            let c = parseInt(a.value) / parseInt(b.value);
+            result.innerText = 'Total is ' + c;
+        }
+    </script>
+</body>
+</html>

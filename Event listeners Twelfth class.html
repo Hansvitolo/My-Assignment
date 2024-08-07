@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JsEvent listeners</title>
+    <style>
+        .group{
+            margin: 12px;
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learning about Events</h1>
+    <p id="show"></p>
+    <button id="toShow" onclick="displayText()">Show contents</button><br><br>
+    
+    <input type="text" name="" id="" disabled value = 'this form is disabled'>
+    <div class="group">
+        <button onclick="toEnable()">Enable</button>
+        <button  onclick="setFontSize()">Swift</button>
+        <button  onclick="setFontColor()">Spectranet</button>
+        <button  onclick="setBgColor()">Smile</button>
+    </div>
+
+    <script>
+        let p = document.getElementById('show');
+        let i = document.querySelector('input');
+        function displayText(){
+            alert('This function has been called');
+            
+            document.getElementById('show').innerText = 'Hello my name is Drem';
+        }
+
+        function setFontSize(){
+            p.style.fontSize = '20px';
+        }
+        function setFontColor(){
+            p.style.color = 'red';
+        }
+        function setBgColor(){
+            p.style.backgroundColor = 'black';
+        }
+
+        function toEnable(){
+            i.setAttribute('type', 'password')
+            i.removeAttribute('disabled')
+        }
+    </script>
+</body>
+</html>

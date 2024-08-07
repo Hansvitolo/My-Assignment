@@ -1,0 +1,500 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: sticky;
+  top: 0;
+}
+
+.nav1 {
+  background: linear-gradient(to left, lightcoral, pink);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.nav1 .social {
+  margin-left: 30px;
+}
+
+.nav1 .social i {
+  font-size: 18px;
+  color: white;
+  padding-right: 15px;
+}
+
+.nav1 .social i:hover {
+  transform: scale(1.07);
+  cursor: pointer;
+}
+
+.nav1 .mid {
+  margin-right: 30px;
+  color: white;
+}
+
+.nav1 .mid a {
+  margin-right: 150px;
+  margin-left: 150px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav1 .mid a:hover {
+  text-decoration: underline;
+}
+
+.nav1 .mid i {
+  font-size: 10px;
+}
+
+.nav1 .end {
+  margin-right: 30px;
+}
+
+.nav1 .end a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav1 .end a:hover {
+  text-decoration: underline;
+}
+
+.nav1 .end a i {
+  margin-left: 7px;
+  position: relative;
+}
+
+.currency-dropdown {
+  display: none;
+  position: absolute;
+  background-color: lightcoral;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* z-index: 1; */
+  right: 10px;
+  margin-top: 12px;
+  height: 150px;
+  overflow-y: scroll;
+}
+
+.currency-dropdown ul li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
+  left: 10px;
+}
+
+.currency-dropdown ul li:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.nav1 .end a:focus ~ .currency-dropdown {
+  display: block;
+  transition: opacity 0.5s ease-in, transform 1s ease-in;
+  color: lightgray;
+}
+
+.nav2 {
+  height: 70px;
+  background-color: mistyrose;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin: 0;
+  /* flex-grow: ; */
+}
+
+.nav2 .logo {
+  /* margin-left: 30px; */
+  background-color: white;
+  border-radius: 50%;
+  /* padding: 10px; */
+  margin-right: 100px;
+  cursor: pointer;
+}
+
+.nav2 .search {
+  margin-left: 80px;
+}
+
+.nav2 .search input {
+  width: 600px;
+  height: 45px;
+  border: 1px solid;
+  border-radius: 50px;
+  border-color: #191919;
+  /* padding: auto; */
+  padding-left: 40px;
+  /* flex-grow: 1; */
+}
+
+.nav2 .search input:hover {
+  border: 2px solid;
+  border-color: black;
+}
+
+.nav2 .search input::placeholder {
+  /* padding-left: 20px; */
+  font-size: 18px;
+  font-family: oswald;
+  font-weight: 100;
+}
+
+.nav2 .search input:focus::placeholder {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.nav2 .end {
+  margin-left: 150px;
+  margin-top: 10px;
+}
+
+.nav2 .end i {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.nav2 .end i:hover {
+  transform: scale(1.09);
+  cursor: pointer;
+}
+
+.nav3 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  /* margin-left: 10px; */
+  padding: 15px;
+  padding-left: 0;
+  /* margin-bottom: 15px; */
+  /* padding-bottom: 1; */
+  z-index: 1;
+  background-color: white;
+}
+
+.nav3 a {
+  padding-left: 10px;
+  text-decoration: none;
+  color: dimgray;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.nav3 a:hover {
+  text-decoration: underline;
+}
+
+/* .nav3 i{
+    margin-top: 4px;
+    margin-left: 0;
+    padding-left: 0;
+} */
+.nav3 a i {
+  margin-left: 7px;
+}
+
+.image {
+  height: 30px;
+  width: auto;
+  background: url(Project-shimmers-images/flower2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  /* margin-top: 0; */
+  /* object-fit: fill; */
+  /* background-position: center; */
+  /* background-size: 50% 100%, 50% 100%; */
+}
+
+.image .faint {
+  font-size: 150px;
+  opacity: 0.4;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  /* color: palevioletred; */
+  font-family: cursive;
+  font-style: italic;
+  position: absolute;
+  /* display: flex; */
+  bottom: 320px;
+  font-weight: lighter;
+}
+
+.image #new {
+  font-size: 90px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-style: italic;
+  text-align: center;
+}
+
+.image p {
+  margin-top: 0;
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.image button {
+  background-color: palevioletred;
+  border: 2px solid white;
+  border-radius: 50px;
+  color: white;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 12px;
+}
+
+.image:hover {
+  cursor: pointer;
+}
+
+.image button:hover {
+  cursor: pointer;
+}
+
+.sec2 {
+  background-color: #f8f8f8;
+  /* display: flex; */
+  margin: 0;
+  height: 520px;
+}
+
+.display {
+  /* margin: 50px; */
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 500px;
+}
+
+.play {
+  background-color: #e8e8e8;
+  margin: 0;
+  width: 100%;
+  height: 90%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.play img {
+  /* margin: 30px;     */
+  width: 100%;
+  height: 80%;
+  display: flex;
+}
+
+.play p {
+  margin-top: 40px;
+  font-size: 20px;
+  margin-left: 50px;
+  font-weight: 400;
+}
+
+.play p i {
+  margin-left: 10px;
+  margin-top: 2px;
+  font-size: 13px;
+}
+
+.play p i:hover {
+  transform: scale(1.4);
+}
+
+@media (max-width: 768px) {
+  .nav1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav1 .mid {
+    margin: 10px 0;
+  }
+
+  .nav1 .mid a {
+    margin: 0;
+    padding: 5px;
+  }
+
+  .nav2 .search {
+    margin-left: 20px;
+  }
+
+  .nav2 .end {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav1 .social {
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .nav1 .mid {
+    margin-right: 0;
+  }
+
+  .nav1 .mid a {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 5px;
+  }
+
+  .nav2 .search input {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  .nav2 .end {
+    margin-left: 10px;
+  }
+}
+
+#contain {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(241, 234, 225); */
+  flex-wrap: wrap;
+}
+/* h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+#card1,
+#card2,
+#card3 {
+  width: 350px;
+  height: 400px;
+  /* background-color: aqua; */
+}
+/* .card1_img, .card2_img, .card3_img{
+    width: 100%;
+    height: 100%;
+} */
+#card1 {
+  background-image: url("Project-shimmers-images/Paloma_Dress_Black_Tan_Botanical_3066_0949.webp");
+  /* object-fit: contain; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#card2 {
+  background-image: url("Project-shimmers-images/6008_camel_Cardigan_12872_check_skirt_2314po.webp");
+  /* object-fit: contain; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#card3 {
+  background-image: url("Project-shimmers-images/Lara_Knit_Cardigan_6382_pink_3814_beanie_navycopy.webp");
+  /* object-fit: contain; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#view_more {
+  background-color: white;
+  width: 100%;
+  padding: 20px 20px;
+}
+
+#slide_show {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  /* margin: 10px; */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(241, 234, 225); */
+  flex-wrap: nowrap;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+.slider_image {
+  background-image: url("Project-shimmers-images/Paloma_Dress_Black_Tan_Botanical_3066_0949.webp");
+  /* object-fit: contain; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 400px;
+  /* background-color: aqua; */
+}
+.first{
+    transition: ease-in-out 0.5s;
+}
+.first:hover {
+  transform: translateY(-20px);
+  cursor: pointer;
+
+  /* margin-top: -20px; */
+}
+
+button {
+  padding: 2px 5px;
+  margin: 2px 2px;
+  border-radius: 15px;
+  border: 1px solid gray;
+  font-size: 10px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #e8e8e8;
+}
+
+#parallax {
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bg1 {
+  background-image: url("Project-shimmers-images/Seaside_Pendant_Necklace_2_AND2253GOLD-2_491068d4-ee6d-4975-9b2b-6d682b73fd5c.webp");
+}
+
+#bg2 {
+  background-image: url("Project-shimmers-images/dining.jpg");
+}
+
+
+
+
+/* order page designs */
+
+.picture{
+  width: 100px;
+  height: 100px;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  /* background-size: contain;
+  background-repeat: no-repeat; */
+}

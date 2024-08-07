@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objects</h1>
+    <p id="show"></p>
+    <p id="show2"></p>
+    <p id="blow"></p>
+
+    <script>
+        document.getElementById('show').innerHTML = '<b> Hello drem';
+            // html element affects it
+        document.getElementById('show2').innerText = '<b> Hello drem';
+            // html element will appear as a text and does not have any effect
+            document.getElementById('show2').textContent = '<b> Hello drem';
+                // Same as the above. Result is txt based format
+                document.querySelector('h1').innerText = 'Singularities are an enigma'
+
+                let p = document.getElementById('show2');
+                p.innerHTML = 'Another angle';
+                p.style.backgroundColor = 'blue';
+                // to change the background color of an element
+                p.style.color = 'white';
+                // to change the color of the text. These are both ways to use javascript to effect CSS edits
+                document.getElementById('blow')
+                let phone = {
+                    brand: 'iphone',
+                    model: 16,
+                    size: 6.2,
+                    color: 'midnight blue',
+                    price: 320000
+                }
+                let you = ['tj', 'verbose', 'gear', 'tube', phone];
+                console.log(you)
+                blow.textContent = `This is the array ${you[0]}, ${you[1]}, ${you[2]}, ${you[3]}, ${you[4].brand}`
+
+
+        p.innerHTML = 'I bought an ' + phone.brand;
+        console.log('the sky is ' + phone.color);
+        console.log(document.getElementById('show'));
+    </script>
+</body>
+</html>

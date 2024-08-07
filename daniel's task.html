@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel's task 3 trials</title>
+</head>
+<body>
+    <!-- Design a program that accepts input of numbers. The program should reject any number inputed except the correct number. The program should run continuosly until the correct number is inputed.
+    The second part: make the program only have three trials and after that end. -->
+
+    <h1>Daniel's Task</h1>
+
+    <script> 
+        for (i = 3; i >= 1; i--){
+            let num = Number(prompt('Guess the right number for input. You have three trials'));
+            if (num == '50'){
+                alert(`${num} is the right answer`);
+                break;
+                }
+            alert(`Wrong. You have ${i - 1} chance. Enter the correct answer`);
+            }
+        alert('Game over');
+    </script>
+</body>
+</html>

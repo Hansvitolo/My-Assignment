@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+<body>
+    <h2>Regular Expression</h2>
+    <p id="show">
+    </p>
+
+    <script>
+        let show = document.getElementById('show');
+
+        let txt = 'Learning Regular Expression at Aptech';
+        let phn = '9266847770';
+        let regexp = /[a-g]/g;
+        let regNum = /[1-6]/g;
+        // show.textContent = txt.match(regexp);
+        show.textContent = phn.match(regNum);
+    </script>
+</body>
+</html>

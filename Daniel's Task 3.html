@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel's Task 3</title>
+  </head>
+  <body>
+    Make a program The program should do the following: How much did you Make.
+    Remove tax 0f 30%. what are your other expenses continuously until the
+    answer is none. The app should tell you the final balance.
+
+    <h1>Daniel's Task 3</h1>
+
+    <script>
+      //Make a program The program should do the following: How much did you Make. Remove tax 0f 30%. what are your other expenses continuously until the     answer is none. The app should tell you the final balance.
+
+      let user = prompt("Enter your name");
+      let amount = Number(prompt(`Hello ${user}, how much did you make?`));
+      alert(`${user}, you made ${amount}`);
+      let tax = amount * 0.3;
+      alert(`${user}, your new balance is 30% off giving ${tax}`);
+      let balance = amount - tax;
+      alert(`${user}, your balance is ${balance}`);
+
+      while(true){
+        let input = prompt(`What are your other expenses ${name}`);
+        if (num <= balance && num > 0){
+            alert('what are your other expenses');
+        }
+        let newBal = balance - num;
+      }
+
+
+    //   while (true) {
+    //     let num = prompt(`${user} what are your other expenses`);
+    //     if (num <= balance && num > 0) {
+    //       alert(`Okay ${user}, any other expense`);
+    //     } else if (num == "no") {
+    //       alert(`${user}, your balance is ${balance - num}`);
+    //       break;
+    //     }
+    //   }
+
+    //   alert(`${user}, your final balance is ${balance - num}`);
+    </script>
+  </body>
+</html>

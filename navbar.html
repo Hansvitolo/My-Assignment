@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <title>Home</title>
+    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/59550fb234.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav1 {
+            background: linear-gradient(to left, lightcoral, pink);
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        .nav1 .social {
+            margin-left: 30px;
+        }
+
+        .nav1 .social i {
+            font-size: 18px;
+            color: white;
+            padding-right: 15px;
+        }
+
+        .nav1 .social i:hover {
+            transform: scale(1.07);
+            cursor: pointer;
+        }
+
+        .nav1 .mid {
+            margin-right: 30px;
+            color: white;
+        }
+
+        .nav1 .mid a {
+            margin-right: 150px;
+            margin-left: 150px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav1 .mid a:hover {
+            text-decoration: underline;
+        }
+
+        .nav1 .mid i {
+            font-size: 10px
+        }
+
+        .nav1 .end {
+            margin-right: 30px;
+        }
+
+        .nav1 .end a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav1 .end a:hover {
+            text-decoration: underline;
+        }
+
+        .nav1 .end a i {
+            margin-left: 7px;
+            position: relative;
+        }
+
+        .currency-dropdown {
+            display: none;
+            position: absolute;
+            background-color: lightcoral;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            /* z-index: 1; */
+            right: 10px;
+            margin-top: 12px;
+            height: 150px;
+            overflow-y: scroll;
+        }
+
+        .currency-dropdown ul li {
+            list-style-type: none;
+            margin-bottom: 10px;
+            margin: 0;
+            padding: 0;
+            left: 10px;
+        }
+
+        .currency-dropdown ul li:hover {
+            cursor: pointer;
+            color: white;
+        }
+
+        .nav1 .end a:focus~.currency-dropdown {
+            display: block;
+            transition: opacity 0.5s ease-in, transform 1s ease-in;
+            color: lightgray;
+        }
+
+        .nav2 {
+            height: 50px;
+            background-color: mistyrose;
+            display: flex;
+            justify-content: space-between;
+            padding: 35px;
+            margin: 0;
+            /* flex-grow: ; */
+        }
+
+        .nav2 .logo {
+            /* margin-left: 30px; */
+            background-color: white;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 100px;
+        }
+
+        .nav2 .search {
+            margin-left: 80px;
+        }
+
+        .nav2 .search input {
+            width: 600px;
+            height: 45px;
+            border: 1px solid;
+            border-radius: 50px;
+            border-color: #191919;
+            /* padding: auto; */
+            padding-left: 40px;
+            /* flex-grow: 1; */
+        }
+
+        .nav2 .search input:hover {
+            border: 2px solid;
+            border-color: black;
+        }
+
+        .nav2 .search input::placeholder {
+            /* padding-left: 20px; */
+            font-size: 18px;
+            font-family: oswald;
+            font-weight: 100;
+        }
+
+        .nav2 .search input:focus::placeholder {
+            font-size: 12px;
+            padding-bottom: 10px;
+        }
+
+        .nav2 .end {
+            margin-left: 150px;
+            margin-top: 10px;
+        }
+
+        .nav2 .end i {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        .nav2 .end i:hover {
+            transform: scale(1.09);
+            cursor: pointer;
+        }
+
+        .nav3 {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            /* margin-left: 10px; */
+            padding: 15px;
+            padding-left: 0;
+            /* margin-bottom: 15px; */
+            /* padding-bottom: 1; */
+            z-index: 1;
+            background-color: white;
+        }
+
+        .nav3 a {
+            padding-left: 10px;
+            text-decoration: none;
+            color: dimgray;
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        .nav3 a:hover {
+            text-decoration: underline;
+        }
+
+        /* .nav3 i{
+            margin-top: 4px;
+            margin-left: 0;
+            padding-left: 0;
+        } */
+        .nav3 a i {
+            margin-left: 7px;
+        }
+
+        .image {
+            height: 30px;
+            width: auto;
+            background: url(ballons.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            /* margin-top: 0; */
+            /* object-fit: fill; */
+            /* background-position: center; */
+            /* background-size: 50% 100%, 50% 100%; */
+        }
+
+        .image .faint {
+            font-size: 150px;
+            opacity: 0.4;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            /* color: palevioletred; */
+            font-family: cursive;
+            font-style: italic;
+            position: absolute;
+            /* display: flex; */
+            bottom: 320px;
+            font-weight: lighter;
+        }
+
+        .image #new {
+            font-size: 90px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .image p {
+            margin-top: 0;
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .image button {
+            background-color: palevioletred;
+            border: 2px solid white;
+            border-radius: 50px;
+            color: white;
+            padding: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            font-size: 12px;
+        }
+
+        .image:hover {
+            cursor: pointer;
+        }
+
+        .image button:hover {
+            cursor: pointer;
+        }
+
+        .sec2 {
+            background-color: #f8f8f8;
+            /* display: flex; */
+            margin: 0;
+            height: 520px;
+        }
+
+        .display {
+            /* margin: 50px; */
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            height: 500px;
+        }
+
+        .play {
+            background-color: #e8e8e8;
+            margin: 0;
+            width: 100%;
+            height: 90%;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .play img {
+            /* margin: 30px;     */
+            width: 100%;
+            height: 80%;
+            display: flex;
+        }
+
+        .play p {
+            margin-top: 40px;
+            font-size: 20px;
+            margin-left: 50px;
+            font-weight: 400;
+        }
+
+        .play p i {
+            margin-left: 10px;
+            margin-top: 2px;
+            font-size: 13px;
+        }
+
+        .play p i:hover {
+            transform: scale(1.4);
+        }
+
+        @media (max-width: 768px) {
+            .nav1 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav1 .mid {
+                margin: 10px 0;
+            }
+
+            .nav1 .mid a {
+                margin: 0;
+                padding: 5px;
+            }
+
+            .nav2 .search {
+                margin-left: 20px;
+            }
+
+            .nav2 .end {
+                margin-left: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav1 .social {
+                justify-content: center;
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .nav1 .mid {
+                margin-right: 0;
+            }
+
+            .nav1 .mid a {
+                margin-right: 0;
+                margin-left: 0;
+                padding: 5px;
+            }
+
+            .nav2 .search input {
+                width: 100%;
+                margin-left: 10px;
+            }
+
+            .nav2 .end {
+                margin-left: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: relative;">
+        <header>
+            <div class="nav1">
+                <div class="social">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div>
+                <div class="mid">
+                    <i class="fa-solid fa-less-than"></i>
+                    <a href="">EASY RETURNS</a>
+                    <i class="fa-solid fa-greater-than"></i>
+                </div>
+                <div class="end">
+                    <a href="">AUD $ | Australia<i class="fa-solid fa-angle-down"></i></a>
+                    <div class="currency-dropdown">
+                        <ul>
+                            <li>CAD $ | Canada</li>
+                            <li>EUR € | FIji</li>
+                            <li>EUR € | Germany</li>
+                            <li>EUR € | Ireland</li>
+                            <li>EUR € | New Caledonia</li>
+                            <li>NZD $| New Zealand</li>
+                            <li>EUR € | Paupa New Guinea</li>
+                            <li>EUR € | Singapore</li>
+                            <li>EUR € | South Africa</li>
+                            <li>EUR € | Thailand</li>
+                            <li>GBP £ | United Kingdom</li>
+                            <li>USD $ | United States</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav2">
+                <div class="logo">LOGO</div>
+                <div class="search"><input type="text" placeholder="Search"></div>
+                <div class="end">
+                    <i class="fa-regular fa-user"></i>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+            <div class="nav3">
+                <a href="">NEW ARRIVALS</a>
+                <a href="">BACK IN STOCK</a>
+                <a href="">SHOP ALL<i class="fa-solid fa-angle-down"></i></a>
+                <a href="">SHOP BY<i class="fa-solid fa-angle-down"></i></a>
+                <a href="">BRANDS<i class="fa-solid fa-angle-down"></i></a>
+                <a href="">SHOP BY SIZE<i class="fa-solid fa-angle-down"></i></a>
+                <a href="">SALE<i class="fa-solid fa-angle-down"></i></a>
+            </div>
+        </header>
+        <section>
+            <div class="image">
+                <!-- <p class="faint">winter</p> -->
+                <h2 id="new">NEW <br>ARRIVALS</h2>
+                <p>AFFORDABLE FASHION FOR WOMEN</p>
+                <button>SHOP NEW ARRIVALS</button>
+            </div>
+        </section>
+    </div>
+
+    <section class="sec2">
+        <div class="display">
+            <div style="margin-left: 50px;" class="play"><img src="1st.webp" alt="">
+                <p>View More<i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+            <div class="play"><img src="2nd.webp" alt="">
+                <p>View More<i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+            <div style="margin-right: 50px;" class="play"><img src="3rd.webp" alt="">
+                <p>View More<i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+
+        </div>
+        <!-- <img src="2nd.webp" alt="">
+        <img src="3rd.webp" alt=""> -->
+    </section>
+    <br><br>
+    <h2>NEW ARRIVALS</h2>
+</body>
+
+</html>

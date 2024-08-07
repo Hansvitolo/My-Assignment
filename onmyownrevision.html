@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision</title>
+</head>
+<body>
+    <h1>Welcome to Aptech's Master Degree Program</h1>
+    <script>
+        let name = prompt('What is your name');
+        let age = Number(prompt('What is your age'));
+        if(age >= 20 && age <= 40){
+            alert(`${name} has been accepted into the program`);
+            let subjectarea = prompt('What is your subject area');
+            if(subjectarea == 'science'){
+                alert(`${name} can proceed to pick his/her course of study`);
+            }
+            else{alert(`${name} has been rejected, sorry`)};
+        } 
+        else{
+            alert(`${name} has been rejected`);
+        }
+
+        alert(`${name} your first task as a science student, is to build a program that generates a random number and the user has to guess that random number`);
+        let secretNumber = Math.floor(Math.random() * 10) + 1;
+        let attempt = 3;
+        while(attempt > 0){
+            let userInput = Number(prompt(`${name}, guess the right number`));
+            if(secretNumber > userInput){
+                attempt -= 1;
+                alert(`The secret number is greater than the user number. You have ${attempt} attempts left.`);
+            }
+            else if(secretNumber < userInput){
+                attempt -= 1;
+                alert(`The secret number is less than the user number. You have ${attempt} attempts left.`);
+            }
+            else{
+                alert(`${name}, you guessed the right answer!`);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

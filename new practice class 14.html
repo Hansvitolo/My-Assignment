@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container{
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        textarea{
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Note-Taking</h1>
+        <textarea id="note-content" placeholder="Write your note here..."></textarea>
+        <button id="save-note">Save Note</button>
+        <button id="load-note">Load Note</button>
+    </div>
+
+    <script>
+        document.getElementById('save-note').addEventListener('click', function(){
+            const noteContent = document.getElementById('note-content').value;
+            localStorage.setItem('note', noteContent);
+            alert('Note saved');
+        });
+
+        document.getElementById('load-note').addEventListener('click', function(){
+            const savedNote = localStorage.getItem('note');
+            if(savedNote){
+                document.getElementById('note-content').value = savedNote;
+                alert('Note loaded');
+            } else {
+                alert('No saved note found');
+            }
+        });
+    </script>
+</body>
+</html>

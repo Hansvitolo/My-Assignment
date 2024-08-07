@@ -1,0 +1,21 @@
+body{
+  background: url('alexandros-giannakakis-OuWiyIgqZgw-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media(max-width: 991px){
+  .sidebar{
+    background-color: rgba(17, 9, 65, 0.15);
+    backdrop-filter: blur(10px);
+  }
+}
+
+
+img{
+  height: 450px;
+  width: 400px;
+  object-fit: contain;
+}
+

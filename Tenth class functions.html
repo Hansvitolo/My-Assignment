@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1></h1>
+    <p id="def"></p>
+
+    <script>
+        document.querySelector('h1').innerText = 'The Creation of Functions';
+        let disp = document.getElementById('def');
+        // function nameFunction (){    //defined function
+        //     return 3 + 5;
+        // }
+
+
+        function thisFunction (){
+            let a = parseInt(prompt('give a number'));
+            let b = parseInt(prompt('another number'));
+            let c = a + b;
+            return c;
+        }
+        // disp.innerText = thisFunction()
+
+        function greeting(name){
+            return 'Welcome ' + name +', so nice to have you here';
+        }
+        disp.innerText = greeting('Drem');
+    </script>
+</body>
+</html>

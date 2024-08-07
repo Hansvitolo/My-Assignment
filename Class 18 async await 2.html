@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+        }
+        .box{
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgb(122, 115, 107);
+            background-color: rgb(18, 18, 71);
+            border-radius: 10px;
+            padding-left: 20px;
+            color: white;
+        }
+        button{
+            padding: 10px;
+            margin: 10px;
+            background-color: rgb(14, 109, 147);
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="display: flex; justify-content: center;">Async Op Example</h2>
+    <div class="container">
+        <div class="box">
+            <h2 id="name"></h2>
+            <p id="show"></p>
+            <h3 id="flow"></h3>
+        </div>
+        <div class="box">
+            <h2 id="name1"></h2>
+            <p id="show1"></p>
+            <h3 id="flow1"></h3>
+        </div>
+        <div class="box">
+            <h2 id="name2"></h2>
+            <p id="show2"></p>
+            <h3 id="flow2"></h3>
+        </div>
+        <div class="box">
+            <h2 id="name3"></h2>
+            <p id="show3"></p>
+            <h3 id="flow3"></h3>
+        </div>
+        <div class="box">
+            <h2 id="name4"></h2>
+            <p id="show4"></p>
+            <h3 id="flow4"></h3>
+        </div>
+        <div class="box">
+            <h2 id="name5"></h2>
+            <p id="show5"></p>
+            <h3 id="flow5"></h3>
+        </div>
+        <!-- <p id="show"></p> -->
+        <button id="btn">Get fake data</button>
+    </div>
+
+    <script>
+        async function findData(){
+
+            try{
+                let response = await fetch('https://jsonplaceholder.typicode.com/users');
+                let data = await response.json();
+                console.log(data);
+                let toShow = data;
+                document.getElementById("name").innerHTML = toShow[0].name;
+                document.getElementById('show').innerHTML = toShow[0].email;
+                document.getElementById('flow').innerHTML = toShow[0].phone;
+                document.getElementById("name1").innerHTML = toShow[1].name;
+                document.getElementById('show1').innerHTML = toShow[1].email;
+                document.getElementById('flow1').innerHTML = toShow[1].phone;
+                document.getElementById("name2").innerHTML = toShow[2].name;
+                document.getElementById('show2').innerHTML = toShow[2].email;
+                document.getElementById('flow2').innerHTML = toShow[2].phone;
+                document.getElementById("name3").innerHTML = toShow[3].name;
+                document.getElementById('show3').innerHTML = toShow[3].email;
+                document.getElementById('flow3').innerHTML = toShow[3].phone;
+                document.getElementById("name4").innerHTML = toShow[4].name;
+                document.getElementById('show4').innerHTML = toShow[4].email;
+                document.getElementById('flow4').innerHTML = toShow[4].phone;
+                document.getElementById("name5").innerHTML = toShow[4].name;
+                document.getElementById('show5').innerHTML = toShow[4].email;
+                document.getElementById('flow5').innerHTML = toShow[4].phone;
+                console.log(toShow);
+
+            } catch (err){
+                console.log('this is the error', err);
+            }
+        }
+        document.getElementById('btn').addEventListener('click', findData);
+    </script>
+</body>
+</html>

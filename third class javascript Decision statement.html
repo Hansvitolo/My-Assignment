@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision statement</title>
+</head>
+<body>
+    <h2>Using If Statement</h2>
+
+    <script>
+        // let age = 18;
+        // if(age > 18){
+        //     alert('you are allowed to enter');
+        // }
+        // else{
+        //     alert('you are not allowed to enter');
+        // }
+
+        let password = 'admin123';
+        if(password == 'admin123'){
+            alert('you are allowed to enter');
+            let staffrole = prompt('what is your role');
+            if(staffrole == 'director'){
+                alert('you have access');
+            }
+            else{
+                alert('BARRED');
+            }
+        }
+        else{
+            alert('you are not allowed to enter');
+        }
+
+        let order = prompt('what will you like to do today');
+        alert('instruction received');
+    </script>
+</body>
+</html>

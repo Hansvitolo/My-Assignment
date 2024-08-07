@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisiting task 10</title>
+</head>
+<body>
+    <h1 id="feel">HEAL</h1>
+    <script>
+        const drem = 'From the highest peaks of the world, I will say God is King';
+        // let disp = document.getElementById('feel');
+        // function myFunction(drem){
+        //     let outcome = '';
+        //     for(i = 0; i < drem.length; i++){
+        //         let script = drem[i];
+        //         if(script !== 'a' && script !== 'e' && script !== 'i' && script !== 'o' && script !== 'u'){
+        //             outcome += script;
+        //         }
+        //     }
+        //     return outcome;
+        // }
+        // disp.innerText = myFunction(drem);
+
+        const birthdaySong = ['Happy birthday to you,\n Happy birthday to you,\n Happy birthday dear Othneil,\n Happy birthday to you.'];
+        let disp = document.getElementById('feel');
+        function birthdaySongs(birthdaySong){
+            let sing = '';
+            for(i = 0; i < birthdaySong.length; i++){
+                let birth = birthdaySong[i];
+                sing += birth;
+            }
+            return sing;
+        }
+        birthdaySong.splice(15, 0, 'Oya how old are you?');
+        disp.innerHTML = birthdaySongs(birthdaySong);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback functions</title>
+</head>
+<body>
+    <h2>How to use Callback functions</h2>
+    <p id="show"></p>
+    <p id="Interval"></p>
+
+    <script>
+        function toDisplay(p){
+            document.getElementById('show').innerText = p;
+        }
+        function firstFunc(){
+            toDisplay('Hi, my name is Abideen');
+        }
+
+        function secFunc(){
+            toDisplay('Naruto is the GOAT');
+        }
+        setTimeout(firstFunc, 5000);
+
+        function clockIn(){
+            let d = new Date();
+            document.getElementById('Interval').innerHTML = (`${d.getHours()}: ${d.getMinutes()}: ${d.getSeconds()}`);
+        }
+        setInterval(clockIn, 1000);
+    </script>
+</body>
+</html>

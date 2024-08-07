@@ -1,0 +1,12 @@
+[{
+    "land": "The Shire",
+    "population": 120500,
+    "language_spoken": ["English", "Hobbish"],
+    "specie": "Hobbits"
+},
+{
+    "land": "Gondor",
+    "population": 2000000,
+    "specie": "men"
+}
+]

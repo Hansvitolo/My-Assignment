@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Work</title>
+</head>
+<body>
+    <h1>Charles Xavier's School for Special and Gifted Kids</h1>
+
+    <script>
+        let name = prompt('what is your name?');
+        let age = Number(prompt('what is your age?'));
+        if(age >= 7 && age < 16){
+            alert(`your child ${name} is allowed to enter`);
+            let habits = prompt('Any strange or stand out behavioural patterns?');
+
+            if(habits == 'yes'){
+                alert(`proceed`);
+                let subject = prompt('subject of interest');
+                if(subject == 'science'){
+                    alert('Accepted');
+                    alert(`congratulations ${name} has been accepted`);
+                }
+            }
+            else{
+                alert(`${name}you are not allowed to enter`);
+            }
+        }
+    </script>
+</body>
+</html>

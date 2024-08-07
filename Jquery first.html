@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Jquery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p>Naruto the GOAT</p>
+    <button>Click Me</button>
+    <button id="toShow">Click me jare</button>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('p').hide();
+            })
+            $('#toShow').click(function(){
+                $('p').show();
+            })
+        });
+    </script>
+</body>
+</html>
